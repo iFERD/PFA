@@ -1,0 +1,111 @@
+.header{
+    background-color: #747678;
+    height: 100px;
+  }
+  .logo {
+    width: 100px;
+    height: 70px;
+  }
+  
+  .logo img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .header-menu {
+    line-height: 64px;
+  }
+  
+  .sider-menu {
+    height: 220%;
+    border-right: 0;
+  }
+  
+  .inner-layout {
+    padding: 0 24px 24px;
+  }
+  
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+  
+  nz-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+  }
+  nz-image{
+    height: 20%;
+  }
+  nz-progress {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .form-container {
+    background-color: #747678;
+    border-radius: 9px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  .send-request {
+    margin-bottom: 6px;
+  }
+  
+  .send-request span {
+    margin-left: 8px;
+  }
+  .custom-card {
+    border-radius: 20px;  /* Make the corners round */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Add shadow */
+
+    .ant-avatar {
+        border-radius: 50%;  /* Make the avatar round */
+    }
+}
+.content{
+  border-radius: 9px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 30px;
+}
+.large-avatar {
+  width: 70px !important;
+  height: 70px !important;
+  font-size: 35px !important;
+  line-height: 70px !important;
+}
+nz-dropdown-menu {
+  border-radius: 50px;  /* Make the corners round */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Add shadow */
+}
+::ng-deep .large-avatar {
+  width: 70px !important;
+  height: 70px !important;
+  font-size: 35px !important;
+  line-height: 70px !important;
+}
+.centered-content {
+  display: flex;
+  justify-content: center;
+  width: 40%; /* Change this to adjust the width as per your needs */
+  margin: 0 auto; /* This will center your content horizontally */
+  border-radius: 10px;
+}
+nz-input-group{
+  border-radius: 20px;
+  font-size: 10%;
+}
+
+.custom-card2 {
+  border-radius: 20px;  /* Make the corners round */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Add shadow */
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #E98300;
+  font-size: 20px;
+ 
+}

@@ -1,0 +1,100 @@
+.header {
+    background-color: #E98300;
+    height: 100px;
+  }
+  
+  .button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: large;
+  }
+  [nz-menu] {
+    line-height: 64px;
+  }
+  
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+  
+  nz-content {
+    padding: 0 50px;
+    overflow: hidden; /* Remove scrolling from the content */
+  }
+  
+  nz-footer {
+    text-align: center;
+  }
+  
+  .inner-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+    font-size: large;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .welcom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+  }
+ .welcom2{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem; /* Adjust the font size to make it larger */
+  text-align: center; /* Center align the text */
+  white-space: pre-line; /* Preserve line breaks */
+ }
+ .custom-card {
+  border-radius: 20px;  /* Make the corners round */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Add shadow */
+
+  
+  
+}
+.custom-card2 {
+  border-radius: 20px;  /* Make the corners round */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Add shadow */
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #E98300;
+  font-size: 20px;
+ 
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  flex: -50;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.central-image {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hola {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.download-button {
+  background-color: #E98300;
+  border-color: #E98300;
+  font-size: 120%;
+  margin-top: 20px;
+}
+

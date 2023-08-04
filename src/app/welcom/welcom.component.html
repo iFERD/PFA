@@ -1,0 +1,75 @@
+<nz-layout>
+    <nz-header class="header">
+      <div nz-row>
+        <div nz-col nzSpan="8">
+            <img nz-image nzSrc="../../../assets/image/logo.png" style="height: 110px; width: auto;" />
+        </div>
+        <div nz-col nzSpan="8" style="display: flex; justify-content: center;">
+            <div style="display: flex; align-items: center;">
+                <img nz-image nzSrc="../../assets/image/icons8-idée-256.png" style="height: 80px; width: auto;" />
+                
+                <span style="color: aliceblue;font-size: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Good-Idea</span>
+                
+            </div>
+            
+        </div>
+        <div nz-col nzSpan="8">
+          <div class="hola">
+            <button nz-button nzType="primary" class="download-button" nzGhost nzShape="round" routerLink="/login" style="color: #fff;">
+              <span nz-icon nzType="login" nzTheme="outline"></span>Log-In
+            </button>
+          </div>
+          
+        </div>
+    </div>
+    
+      
+    </nz-header>
+    <nz-content  class="content">
+      <nz-breadcrumb>
+        <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+        
+        
+      </nz-breadcrumb>
+      <div class="inner-content">
+    
+       <div class="welcom"> <nz-form-label  nzFor="#">Welcome to Good Idea, where creativity meets innovation. We're thrilled to have you here!</nz-form-label> </div>
+     <div class="welcom">
+        <nz-form-label  nzFor="#">We are pleased to introduce our collection of the ideas that have sparked innovation. Explore these brilliant concepts and let them ignite your imagination.</nz-form-label>
+    </div>
+    <br><br>
+    <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card">
+    <div style="display: flex; justify-content: center; align-items: center;justify-content: space-between; width: 180vh; height: 30vh;">
+      <div>
+          <nz-progress [nzPercent]="0" nzType="circle"></nz-progress><br>
+          <br>
+          <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card2"><p>Total-Ideas</p></nz-card>
+      </div>
+      <div>
+        <nz-progress [nzPercent]="0" nzType="circle"></nz-progress><br>
+        <br>
+        <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card2"><p>Submited </p></nz-card>
+    </div>
+      <div>
+          <nz-progress [nzPercent]="0" nzType="circle"></nz-progress><br>
+          <br>
+          <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card2"><p>In-Progress</p></nz-card>
+      </div>
+      <div>
+          <nz-progress [nzPercent]="0" nzType="circle"></nz-progress><br>
+          <br>
+          <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card2"><p>Validated</p></nz-card>
+      </div>
+    
+  </div>
+  
+</nz-card>
+    
+    
+    
+  </div>
+   
+    </nz-content>
+    <nz-footer>
+      <p>© {{ year }} YourCompanyName. All rights reserved.</p></nz-footer>
+  </nz-layout>

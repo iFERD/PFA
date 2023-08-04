@@ -1,0 +1,80 @@
+
+
+  .header{
+    background-color: #E98300;
+    height: 110px;
+  }
+
+  .button{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: large;
+    
+  }
+
+      .logo {
+        
+        width: 120px;
+        height: 31px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 16px 24px 16px 0;
+        float: left;
+      }
+
+      [nz-menu] {
+        line-height: 64px;
+      }
+
+      nz-breadcrumb {
+        margin: 16px 0;
+      }
+
+      nz-content {
+        padding: 0 50px;
+      }
+
+      nz-footer {
+        text-align: center;
+      }
+
+      .inner-content {
+        background: #fff;
+        padding: 24px;
+        min-height: 280px;
+      }
+      .input-field {
+        
+        margin: auto; /* Center the element */
+        display: flex; /* Needed for margin: auto to work */
+        
+    }
+    .custom-button {
+      background-color: #E98300;  /* Change to your preferred color */
+      color: white;  /* Change the text color to your preference, here it is white */
+  }
+  .hola {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .download-button {
+    background-color: #E98300;
+    border-color: #E98300;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    width: 40%; /* Change this to adjust the width as per your needs */
+    margin: 0 auto; /* This will center your content horizontally */
+    border-radius: 10px;
+  }
+  nz-input-group{
+    border-radius: 20px;
+    font-size: 10%;
+  }
+  

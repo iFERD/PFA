@@ -1,0 +1,152 @@
+<nz-header class="header">
+  <div nz-row>
+    <div nz-col nzSpan="8">
+      <img nz-image nzSrc="../../../assets/image/logo.png" style="height: 110px; width: auto;" />
+    </div>
+    <div nz-col nzSpan="8" style="display: flex; justify-content: center;">
+      <div style="display: flex; align-items: center;">
+          <img nz-image nzSrc="../../assets/image/icons8-idée-256.png" style="height: 80px; width: auto;" />
+          
+          <span style="color: aliceblue;font-size: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Good-Idea</span>
+          
+      </div>
+    </div>
+    <div  class="large-avatar" nz-col nzSpan="8" style="display: flex; justify-content: flex-end; align-items: center;">
+      <a nz-dropdown [nzDropdownMenu]="menu">
+        <nz-avatar [nzSize]="'large'" nzIcon="user"></nz-avatar>
+       
+      </a>
+      <nz-dropdown-menu  #menu="nzDropdownMenu">
+        <ul nz-menu>
+          <li nz-menu-item>ID:558613</li>
+          <li nz-menu-item>Prenom : Zaid</li>
+          <li nz-menu-item>Nom : Hatati</li>
+          <li nz-menu-divider></li>
+          <li nz-menu-item >log-out</li>
+        </ul>
+      </nz-dropdown-menu>
+    </div>
+  </div>
+</nz-header>
+    <nz-layout>
+     
+      <nz-layout class="inner-layout">
+        <nz-breadcrumb>
+          <nz-breadcrumb-item > <a routerLink="/login">Home</a>  </nz-breadcrumb-item>
+          <nz-breadcrumb-item > <a routerLink="/dashbord-user">Dashbord</a> </nz-breadcrumb-item>
+          <nz-breadcrumb-item > <a routerLink="/formuliare"></a> Formulaire</nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <nz-content>
+          <div class="grid-wrapper">
+              <div class="grid-item">  
+                  <nz-form-label nzFor="#">Décriver votre proposition d'amélioration</nz-form-label>
+                  <div>
+                      <nz-form-label nzRequired nzFor="#">title</nz-form-label> 
+                      <input nz-input placeholder="" nzSize="large" />
+                  </div>
+                  <div>
+                      <nz-form-label nzRequired nzFor="#">Expliquer votre Idée</nz-form-label>
+                      <textarea rows="3" nz-input [(ngModel)]="inputValue"></textarea>
+                  </div>
+                  <div>
+                      <nz-form-label nzRequired nzFor="#">Sur quelle activite est-elle applicable ? </nz-form-label>
+                  </div>
+                 
+                  <div><label nz-checkbox [(ngModel)]="checkboxValue1">Molding</label></div>
+    
+                <div>
+                  
+                    <nz-tree-select
+                    [nzDisabled]="!checkboxValue1"
+                    style="width: 250px"
+                    nzPlaceHolder="Please select"
+                    [nzExpandedKeys]="expandKeys"
+                    [(ngModel)]="value"
+                    [nzDropdownMatchSelectWidth]="true"
+                    [nzDropdownStyle]="{ 'max-height': '300px' }"
+                    [nzNodes]="nodes"
+                    [nzAsyncData]="true"
+                    (nzExpandChange)="onExpandChange1($event)"
+                  ></nz-tree-select>
+                </div>
+
+                <div><label nz-checkbox [(ngModel)]="checkboxValue2">Cable Assembly</label></div>
+    
+                <div>
+                  
+                    <nz-tree-select
+                    [nzDisabled]="!checkboxValue2"
+                    style="width: 250px"
+                    nzPlaceHolder="Please select"
+                    [nzExpandedKeys]="expandKeys"
+                    [(ngModel)]="value"
+                    [nzDropdownMatchSelectWidth]="true"
+                    [nzDropdownStyle]="{ 'max-height': '300px' }"
+                    [nzNodes]="nodes"
+                    [nzAsyncData]="true"
+                    (nzExpandChange)="onExpandChange1($event)"
+                  ></nz-tree-select>
+                </div>
+
+                <div><label nz-checkbox [(ngModel)]="checkboxValue3">Connector Assembly</label></div>
+    
+                <div>
+                  
+                    <nz-tree-select
+                    [nzDisabled]="!checkboxValue3"
+                    style="width: 250px"
+                    nzPlaceHolder="Please select"
+                    [nzExpandedKeys]="expandKeys"
+                    [(ngModel)]="value"
+                    [nzDropdownMatchSelectWidth]="true"
+                    [nzDropdownStyle]="{ 'max-height': '300px' }"
+                    [nzNodes]="nodes"
+                    [nzAsyncData]="true"
+                    (nzExpandChange)="onExpandChange1($event)"
+                  ></nz-tree-select>
+                </div>
+                <label nz-checkbox [(ngModel)]="isCheckboxChecked">
+                  other
+              </label>
+              <input type="text" nz-input *ngIf="isCheckboxChecked" />
+              
+                
+              </div>
+      
+              <div class="grid-item">
+                  <div>
+                      <nz-form-label nzFor="#">Inssere une photo</nz-form-label> 
+                      <div class="clearfix">
+                        <nz-upload nzListType="picture">
+                          <button nz-button><span nz-icon></span>Upload</button>
+                        </nz-upload>
+                        <div>
+                          <nz-form-label nzFor="#">Pourriez-vous me décrire le contenu de cette photo ? </nz-form-label>
+                          <textarea rows="3" nz-input [(ngModel)]="inputValue"></textarea>
+                        </div>
+                      </div>
+                  </div>
+                  <div>
+                      <nz-form-label nzFor="#">Inssere un fichier KAYZEN Sheet</nz-form-label> 
+                      <div class="clearfix">
+                        <nz-upload nzListType="picture">
+                          <button nz-button><span nz-icon></span>Charger</button>
+                        </nz-upload>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="but">
+              <button nz-button nzType="primary" style="background-color: orange; border-color: orange;">Ajouter</button>
+              <button nz-button nzType="primary" nzDanger="">Annuler</button>
+          </div>
+      </nz-content>
+      
+        
+        
+      </nz-layout>
+    <nz-layout>
+      <p></p>
+    </nz-layout>

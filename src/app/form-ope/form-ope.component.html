@@ -1,0 +1,150 @@
+<nz-header class="header">
+    <div nz-row>
+      <div nz-col nzSpan="8">
+        <img nz-image nzSrc="../../../assets/image/logo.png" style="height: 110px; width: auto;" />
+      </div>
+      <div nz-col nzSpan="8" style="display: flex; justify-content: center;">
+        <div style="display: flex; align-items: center;">
+            <img nz-image nzSrc="../../assets/image/icons8-idée-256.png" style="height: 80px; width: auto;" />
+            
+            <span style="color: aliceblue;font-size: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Good-Idea</span>
+            
+        </div>
+      </div>
+      <div  class="large-avatar" nz-col nzSpan="8" style="display: flex; justify-content: flex-end; align-items: center;">
+        <a nz-dropdown [nzDropdownMenu]="menu">
+          <nz-avatar [nzSize]="'large'" nzIcon="user"></nz-avatar>
+         
+        </a>
+        <nz-dropdown-menu  #menu="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item>ID:558613</li>
+            <li nz-menu-item>Prenom : Zaid</li>
+            <li nz-menu-item>Nom : Hatati</li>
+            <li nz-menu-divider></li>
+            <li nz-menu-item >log-out</li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+    </div>
+  </nz-header>
+      <nz-layout>
+       
+        <nz-layout class="inner-layout">
+          <nz-breadcrumb>
+            <nz-breadcrumb-item ><a routerLink="/welcom">Home</a></nz-breadcrumb-item>
+            <nz-breadcrumb-item ><a routerLink="/login">Login</a></nz-breadcrumb-item>
+            <nz-breadcrumb-item ><a routerLink="/form-ope">Dashbord</a></nz-breadcrumb-item>
+          
+  
+          </nz-breadcrumb>
+          <nz-content class="content">
+            <nz-row>
+              <nz-col nzSpan="12">
+                <!-- content for left side -->
+                <div class="grid-item">  
+                    <nz-form-label nzFor="#">Décriver votre proposition d'amélioration</nz-form-label>
+                    <div>
+                        <nz-form-label nzRequired nzFor="#">title</nz-form-label> 
+                        <input nz-input placeholder="" nzSize="large" />
+                    </div>
+                    <div>
+                        <nz-form-label nzRequired nzFor="#">Expliquer votre Idée</nz-form-label>
+                        <textarea rows="3" nz-input [(ngModel)]="inputValue"></textarea>
+                    </div>
+                    <div>
+                        <nz-form-label nzRequired nzFor="#">Sur quelle activite est-elle applicable ? </nz-form-label>
+                    </div>
+                    
+                    <div><label nz-checkbox [(ngModel)]="checkboxValue1">Molding</label></div>    
+                  
+                    <div>
+                      <nz-select
+                        [nzMaxTagCount]="3"
+                        [nzMaxTagPlaceholder]="tagPlaceHolder"
+                        nzMode="multiple"
+                        nzPlaceHolder="Please select"
+                        [(ngModel)]="listOfSelectedValue"
+                      >
+                        <nz-option *ngFor="let item of listOfOption" [nzLabel]="item" [nzValue]="item"></nz-option>
+                      </nz-select>
+                      <ng-template #tagPlaceHolder let-selectedList>and {{ selectedList.length }} more selected</ng-template>
+                    </div>
+                    <div><label nz-checkbox [(ngModel)]="checkboxValue1">connector Assembly</label></div>    
+                  
+                    <div>
+                      <nz-select
+                        [nzMaxTagCount]="3"
+                        [nzMaxTagPlaceholder]="tagPlaceHolder"
+                        nzMode="multiple"
+                        nzPlaceHolder="Please select"
+                        [(ngModel)]="listOfSelectedValue"
+                      >
+                        <nz-option *ngFor="let item of listOfOption" [nzLabel]="item" [nzValue]="item"></nz-option>
+                      </nz-select>
+                      <ng-template #tagPlaceHolder let-selectedList>and {{ selectedList.length }} more selected</ng-template>
+                    </div>
+                    <div><label nz-checkbox [(ngModel)]="checkboxValue1">cable Assembly</label></div>    
+                  
+                    <div>
+                      <nz-select
+                        [nzMaxTagCount]="3"
+                        [nzMaxTagPlaceholder]="tagPlaceHolder"
+                        nzMode="multiple"
+                        nzPlaceHolder="Please select"
+                        [(ngModel)]="listOfSelectedValue"
+                      >
+                        <nz-option *ngFor="let item of listOfOption" [nzLabel]="item" [nzValue]="item"></nz-option>
+                      </nz-select>
+                      <ng-template #tagPlaceHolder let-selectedList>and {{ selectedList.length }} more selected</ng-template>
+                    </div>
+                  
+                    <div>
+                      <label nz-checkbox [(ngModel)]="isCheckboxChecked">
+                        other
+                      </label>
+                      <input type="text" nz-input *ngIf="isCheckboxChecked" />
+                    </div>
+                    <br>
+                  
+                    <div class="but">
+                        <button nz-button nzType="primary" style="background-color: orange; border-color: orange;" (click)="resetForm()">Ajouter</button>
+                        <button nz-button nzType="primary" nzDanger="">Annuler</button>
+                    </div>
+                  </div>
+
+
+
+              </nz-col>
+              <nz-col nzSpan="12">
+                <!-- content for right side -->
+                <div class="tbl">
+                <nz-table #basicTable [nzData]="listOfData" style="height: 100px;">
+                    <thead>
+                      <tr>
+                        <th>Idea</th>
+                        <th>Details</th>
+                        <th></th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of basicTable.data">
+               
+                          <nz-divider nzType="vertical"></nz-divider>
+                          <a>Delete</a>
+                        
+                      </tr>
+                    </tbody>
+                  </nz-table>
+                </div>
+              </nz-col>
+            </nz-row>
+          </nz-content>
+          
+          
+          
+        </nz-layout>
+      <nz-layout>
+        <p></p>
+      </nz-layout>

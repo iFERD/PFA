@@ -1,0 +1,125 @@
+<nz-layout>
+  
+    <nz-header class="header">
+      <div nz-row>
+        <div nz-col nzSpan="8">
+          <img nz-image nzSrc="../../../assets/image/logo.png" style="height: 110px; width: auto;" />
+        </div>
+        <div nz-col nzSpan="8" style="display: flex; justify-content: center;">
+          <div style="display: flex; align-items: center;">
+              <img nz-image nzSrc="../../assets/image/icons8-idée-256.png" style="height: 80px; width: auto;" />
+              
+              <span style="color: aliceblue;font-size: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Good-Idea</span>
+              
+          </div>
+        </div>
+        <div  class="large-avatar" nz-col nzSpan="8" style="display: flex; justify-content: flex-end; align-items: center;">
+          <a nz-dropdown [nzDropdownMenu]="menu">
+            <nz-avatar [nzSize]="'large'" nzIcon="user"></nz-avatar>
+          </a>
+          <nz-dropdown-menu  #menu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item>ID:558613</li>
+              <li nz-menu-item>Prenom : Zaid</li>
+              <li nz-menu-item>Nom : Hatati</li>
+              <li nz-menu-divider></li>
+              <li nz-menu-item >log-out</li>
+            </ul>
+          </nz-dropdown-menu>
+        </div>
+      </div>
+    </nz-header>
+   
+    
+      <nz-layout>
+      
+        <nz-layout class="inner-layout">
+          <div class="breadcrumb-container">
+            <nz-breadcrumb>
+              <nz-breadcrumb-item routerLink="/welcom">Home</nz-breadcrumb-item>
+              <nz-breadcrumb-item routerLink="/login">Login</nz-breadcrumb-item>
+              <nz-breadcrumb-item>Dashboard</nz-breadcrumb-item>
+            </nz-breadcrumb>
+          </div>
+          <nz-content class="content">
+            <nz-table
+            #rowSelectionTable
+            nzShowPagination
+            nzShowSizeChanger
+            
+            (nzCurrentPageDataChange)="onCurrentPageDataChange"
+          >
+          <div class="my"><h1>My Idea</h1></div>
+          <thead>
+              <tr>
+                  
+                  <th>MyIdea</th>
+                  <th>Description</th>
+                  <th>Status</th>
+              </tr>
+          </thead>
+          
+            <tbody>
+              <tr *ngFor="let data of rowSelectionTable.data">
+                  <td>
+                      <input type="checkbox" nz-checkbox [disabled]="data.disabled !== undefined ? data.disabled : false" [(ngModel)]="checkedIds[data.id]" (ngModelChange)="onItemChecked(data.id, $event)">
+      
+                  </td>
+                  <td>{{ data.idea }}</td>
+                  <td>{{ data.supplier }}</td>
+                  <td>{{ data.status }}</td>
+              </tr>
+              
+            </tbody>
+          </nz-table>
+  
+          <br><br>
+   
+        
+  
+            <nz-row>
+              <nz-col nzSpan="16">
+               <nz-card style="width:150%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card">
+               <div style="display: flex; justify-content: center; align-items: center;justify-content: space-between; width: 160vh; height: 30vh;">
+                 <div>
+                     <nz-progress [nzPercent]="0" nzType="circle"></nz-progress><br>
+                     <br>
+                     <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card2"><p>Total-Ideas</p></nz-card>
+                 </div>
+                 <div>
+                   <nz-progress [nzPercent]="0" nzType="circle"></nz-progress><br>
+                   <br>
+                   <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card2"><p>Submited </p></nz-card>
+               </div>
+                 <div>
+                     <nz-progress [nzPercent]="0" nzType="circle"></nz-progress><br>
+                     <br>
+                     <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card2"><p>In-Progress</p></nz-card>
+                 </div>
+                 <div>
+                     <nz-progress [nzPercent]="0" nzType="circle"></nz-progress><br>
+                     <br>
+                     <nz-card style="width:100%;" [nzBodyStyle]="{ padding: '24px' }" class="custom-card2"><p>Validated</p></nz-card>
+                 </div>
+               
+             </div>
+            
+           </nz-card>
+               <br>
+           <div class="hola2">
+            <button nz-button nzType="primary" class="download-button" nzShape="round" routerLink="/formulaire">
+              <span nz-icon nzType="form" nzTheme="outline"></span>Add a new idea
+            </button></div>
+              </nz-col>
+              
+  
+              
+              
+            </nz-row>
+      
+  
+          </nz-content>
+  
+        </nz-layout>
+      </nz-layout>
+    </nz-layout>

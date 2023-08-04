@@ -1,0 +1,67 @@
+
+.header{
+    background-color: #E98300;
+    height: 110px;
+  }
+.logo {
+    .logo {
+        
+        width: 120px;
+        height: 31px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 16px 24px 16px 0;
+        float: left;
+      }
+  }
+
+  .header-menu {
+    line-height: 64px;
+  }
+
+  .sider-menu {
+    height: 100%;
+    border-right: 0;
+  }
+
+  .inner-layout {
+    padding: 0 24px 24px;
+  }
+
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+
+  nz-content {
+    background: #fff;
+    padding: 20px;
+    min-height: 200px;
+  
+  }
+  [nz-form] {
+    max-width: 600px;
+  }
+
+  button {
+    margin-left: 8px;
+  }
+  .but{
+    align-items: right;
+    justify-content: right;
+    display: flex;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* This will create two equal columns */
+    gap: 20px;
+  }
+  .grid-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-item {
+    width: 45%; /* Adjust as necessary */
+}

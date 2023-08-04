@@ -1,0 +1,93 @@
+
+.header{
+    background-color: #E98300;
+    height: 110px;
+  }
+.logo {
+    .logo {
+        
+        width: 120px;
+        height: 31px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 16px 24px 16px 0;
+        float: left;
+      }
+  }
+
+  .header-menu {
+    line-height: 64px;
+  }
+
+  .sider-menu {
+    height: 100%;
+    border-right: 0;
+  }
+
+  .inner-layout {
+    padding: 0 24px 24px;
+  }
+
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+
+  nz-content {
+    background: #fff;
+    padding: 20px;
+    min-height: 200px;
+  
+  }
+  [nz-form] {
+    max-width: 600px;
+  }
+
+  button {
+    margin-left: 8px;
+  }
+  .but{
+    align-items: right;
+    justify-content: right;
+    display: flex;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 50fr; /* This will create two equal columns */
+    gap: 20px;
+  }
+  .grid-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-item {
+    width: 90%; /* Adjust as necessary */
+}
+
+nz-select {
+    width: 100%;
+  }
+ 
+.prg{
+  font-size: xx-large;
+}
+.popover-container {
+  display: flex;
+  justify-content: space-between;
+  width: 800px; /* adjust as per your needs */
+}
+
+.left, .right {
+  flex: 1;
+}
+
+.right {
+  margin-left: 20px; /* adjust as per your needs */
+}
+.rating{
+  display: block;
+  justify-content: center;
+  font-size: 15px;
+}

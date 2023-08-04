@@ -1,0 +1,57 @@
+<nz-layout>
+  <nz-header class="header">
+  <div nz-row>
+        <div nz-col nzSpan="8">
+            <img nz-image nzSrc="../../../assets/image/logo.png" style="height: 110px; width: auto;" />
+        </div>
+        <div nz-col nzSpan="8" style="display: flex; justify-content: center;">
+            <div style="display: flex; align-items: center;">
+                <img nz-image nzSrc="../../assets/image/icons8-idée-256.png" style="height: 80px; width: auto;" />
+                
+                <span style="color: aliceblue;font-size: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Good-Idea</span>
+                
+            </div>
+            
+        </div>
+        <div nz-col nzSpan="8"></div>
+    </div>
+     
+    
+  </nz-header>
+  <nz-content class="content">
+    <nz-breadcrumb>
+      <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+      <nz-breadcrumb-item>Login</nz-breadcrumb-item>
+      
+    </nz-breadcrumb>
+    <div class="inner-content centered-content">
+      <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your ID!">
+              <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input placeholder="ID" class="input-field" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Password!">
+              <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nz-input formControlName="password" placeholder="Password" class="input-field"/>
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <div nz-row class="login-form-margin">
+            <div nz-col [nzSpan]="12"></div>
+            <div nz-col [nzSpan]="12"></div>
+          </div>
+          <div class="hola">
+            <button nz-button nzType="primary" class="download-button" nzShape="round">
+              <span nz-icon nzType="login" nzTheme="outline"></span>Log-In
+            </button></div>
+        </form>
+       
+    </div>
+  </nz-content>
+  <nz-footer>
+      Conditions d’utilisation Confidentialité Confidentialité aux États-Unis Politique relative aux cookies Accessibilité Sécurité Plan du site © 2023 TE Connectivity. Tous droits réservés.</nz-footer>
+</nz-layout>
